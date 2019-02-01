@@ -5,7 +5,7 @@ class TodoService extends Service {
   // 新增一条todo
   async create({ title, type }) {
     let todo = {
-      todoid: uuid(),
+      id: uuid(),
       title,
       type,
       time: this.app.mysql.literals.now
