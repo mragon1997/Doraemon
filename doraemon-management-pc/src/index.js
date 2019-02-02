@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Index from './pages/todo/todo.js'
+import Index from './components/layout/layout.js'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(<Index />, document.getElementById('root'))
