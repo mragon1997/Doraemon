@@ -1,0 +1,38 @@
+.page-todo
+    ul
+        padding-inline-start: 0px
+    .todo-content 
+        width: 600px
+        margin: 40px auto
+    .todo-list
+        width: 100%
+        list-style: none
+    .todo-item
+        display: flex
+        justify-content: space-between
+        width: 100%
+        height: 40px
+        padding: 0 20px
+        line-height: 40px
+        transition: all 0.5s ease
+        &:hover
+            background: #eee
+            .todo-icon
+              display: inline
+              cursor: pointer
+        .todo-icon
+            margin-left: 20px
+            display: none
+    .todo-add
+        width: 100%
+        height: 30px
+        margin: 0 20px
+        text-align: center
+        opacity: 0
+        line-height: 30px
+        transition: all 0.5s ease
+        box-sizing: border-box
+        &:hover
+            opacity: 1
+            border: 1px dashed #bbb
+            cursor: pointer

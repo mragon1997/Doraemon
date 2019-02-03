@@ -1,3 +1,37 @@
 .trigger {
   margin-left: 20px;
 }
+
+.ant-layout-sider {
+  transition: all 0.2s;
+  position: relative;
+  background: #fff;
+  min-width: 0;
+}
+
+.ant-layout {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  background: #fff;
+  min-height: 0;
+}
+.ant-layout-content {
+  margin: 0 !important;
+}
+
+.ant-menu-inline,
+.ant-menu-vertical,
+.ant-menu-vertical-left {
+  border-right: none;
+}
+
+.ant-layout-sider {
+  border-right: 1px solid #e8e8e8;
+}
+.ant-menu-root.ant-menu-vertical,
+.ant-menu-root.ant-menu-vertical-left,
+.ant-menu-root.ant-menu-vertical-right,
+.ant-menu-root.ant-menu-inline {
+  border-right: 1px solid #e8e8e8;
+}

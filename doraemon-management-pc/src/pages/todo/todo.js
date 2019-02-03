@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import './todo.css'
+import './todo.sass'
+
+import { Icon } from 'antd'
 
 import { getTodo } from '../../api/todo.js'
 
@@ -27,13 +29,27 @@ class Todo extends Component {
   }
   render() {
     return (
-      <div>
-        <h1>this is todo</h1>
-        <ul>
-          {this.state.todoList.map(todo => {
-            return <li key={todo.id}>{todo.title}</li>
-          })}
-        </ul>
+      <div className="page-todo">
+        <div className="todo-content">
+          <h2>待办</h2>
+          <ul className="todo-list">
+            {this.state.todoList.map(todo => {
+              return (
+                <li className="todo-item" key={todo.id}>
+                  <span>{todo.title}</span>
+                  <span className="todo-icon">
+                    <Icon className="todo-icon" type="check" />
+                    <Icon className="todo-icon" type="stop" />
+                  </span>
+                </li>
+              )
+            })}
+            <li className="todo-add">
+              <Icon className="dora-icon" type="plus-circle" />
+            </li>
+          </ul>
+          <h2>搁置</h2>
+        </div>
       </div>
     )
   }

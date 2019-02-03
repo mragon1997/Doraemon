@@ -26,17 +26,17 @@ class IndexLayout extends Component {
         <Layout>
           <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
             <div className="logo" />
-            <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+            <Menu theme="light" mode="inline" defaultSelectedKeys={['1']}>
               <Menu.Item key="1">
                 <Link to="/">
                   <Icon type="user" />
-                  <span>Dashboard</span>
+                  <span>主面板</span>
                 </Link>
               </Menu.Item>
               <Menu.Item key="2">
                 <Link to="/todo">
-                  <Icon type="video-camera" />
-                  <span>Todo</span>
+                  <Icon type="ordered-list" />
+                  <span>待办事项</span>
                 </Link>
               </Menu.Item>
 
@@ -48,11 +48,7 @@ class IndexLayout extends Component {
           </Sider>
           <Layout>
             <Header style={{ background: '#fff', padding: 0 }}>
-              <Icon
-                className="trigger"
-                type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
-                onClick={this.toggle}
-              />
+              <Icon type="bars" className="trigger" onClick={this.toggle} />
             </Header>
             <Content
               style={{
