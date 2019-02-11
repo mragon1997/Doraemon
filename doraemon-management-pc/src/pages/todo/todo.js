@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './todo.sass'
 
-import { Icon } from 'antd'
+import { Icon, Input } from 'antd'
 
 import { getTodo } from '../../api/todo.js'
 
@@ -9,7 +9,8 @@ class Todo extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      todoList: []
+      todoList: [],
+      isAdd: true
     }
   }
 
@@ -44,9 +45,18 @@ class Todo extends Component {
                 </li>
               )
             })}
-            <li className="todo-add">
-              <Icon className="dora-icon" type="plus-circle" />
-            </li>
+            {this.state.isAdd ? (
+              <li className="todo-input">
+                <Input
+                  placeholder="Basic usage"
+                  addonAfter={<Icon className="todo-icon" type="check" />}
+                />
+              </li>
+            ) : (
+              <li className="todo-add">
+                <Icon className="dora-icon" type="plus-circle" />
+              </li>
+            )}
           </ul>
           <h2>搁置</h2>
         </div>
